@@ -1,0 +1,55 @@
+/* Reset CSS for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main app container to fill the viewport */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  font-size: 10vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.App-header {
+  flex-shrink: 0;
+  height: 30vh;
+  width: 100vw;
+}
+
+.App-body {
+  flex-grow: 1;
+  width: 100vw;
+  overflow-y: auto; /* Allow body to scroll if content overflows */
+}
+
+.App-bottom {
+  flex-shrink: 0;
+  height: 10vh;
+  width: 100vw;
+  font-size: 2vh;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  animation: wax-wane 3s infinite ease-in-out;
+}
+
+@keyframes wax-wane {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
